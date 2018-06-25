@@ -26,12 +26,14 @@ public class Menu {
                 Square cuadrado = new Square(1,side);
                 cuadrado.Operation();
             } else if (op2 == 2) {    
-                System.out.println("digite la medida del lado");
+                System.out.println("digite la medida del largo");
                 int side = scanner.nextInt();
-                Rectangle rectangle = new Rectangle (1,side);
+                System.out.println("digite la medida del ancho");
+                int side2 = scanner.nextInt();
+                Rectangle rectangle = new Rectangle (1,side, side2);
                 rectangle.Operation();
             } else if (op2 == 3) {            
-                System.out.println("digite el valor de medida: ");
+                System.out.println("digite la medida del radio");
                 int side = scanner.nextInt();
                 Circle circle = new Circle (1,side);
                 circle.Operation();
@@ -45,9 +47,11 @@ public class Menu {
                 Square cuadrado = new Square(2,side);
                 cuadrado.Operation();
             } else if (op2 == 2) {
-                System.out.println("digite la medida del lado");
+                System.out.println("digite la medida del largo");
                 int side = scanner.nextInt();
-                Rectangle rectangle = new Rectangle (2,side);
+                System.out.println("digite la medida del ancho");
+                int side2 = scanner.nextInt();
+                Rectangle rectangle = new Rectangle (2,side, side2);
                 rectangle.Operation();
             } else if (op2 == 3) {
                 System.out.println("digite la medida del lado");

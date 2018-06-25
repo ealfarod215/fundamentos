@@ -14,19 +14,21 @@ public class Rectangle {
     private int perimeter;
     private int area;
     private int mside;
-    public Rectangle(int number, int side){
+    private int mside2;
+    public Rectangle(int number, int side, int side2){
        option = number;
        mside = side;
+       mside2 = side2;
     }
     
     public int Operation(){
         int t = 0;
         if (option == 1){
-            perimeter = mside+mside+mside+mside;
+            perimeter = mside+mside2+mside+mside2;
             t = perimeter;
             System.out.println("El perimetro corresponde a: "+ t );
         }else if(option == 2){
-            area = mside*mside;
+            area = mside*mside2;
             t = area;
             System.out.println("El area corresponde a: "+ t );
         }
