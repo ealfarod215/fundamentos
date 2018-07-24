@@ -1,0 +1,116 @@
+package fundamentos.firestore;
+
+import com.google.api.core.ApiFuture;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.cloud.firestore.CollectionReference;
+import com.google.cloud.firestore.DocumentReference;
+import com.google.cloud.firestore.DocumentSnapshot;
+import com.google.cloud.firestore.Firestore;
+import com.google.cloud.firestore.Query;
+import com.google.cloud.firestore.QuerySnapshot;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.cloud.FirestoreClient;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+public class Sample {
+    public static void main(String[] args) {
+        try {
+            // Inicializa la conexión con Firestore
+            // El String debe apuntar a la ruta del archivo .json de su computadora
+            InputStream serviceAccount = new FileInputStream("/Users/davibq/NetBeansProjects/Firestore/src/main/java/fundamentos/firestore/credentials.json");
+            GoogleCredentials credentials = GoogleCredentials.fromStream(serviceAccount);
+            FirebaseOptions options = new FirebaseOptions.Builder()
+                .setCredentials(credentials)
+                .build();
+            FirebaseApp.initializeApp(options);
+
+            Firestore db = FirestoreClient.getFirestore();
+            
+            /*
+            // EJEMPLO 1: GUARDAR INFORMACIÓN
+            // Creamos un nuevo usuario
+            User u1 = new User();
+            u1.setName("David");
+            u1.setLastName("Ballesteros");
+            u1.setAge((27));
+            
+            // Guardamos el usuario
+            ApiFuture<DocumentReference> refU1 = db.collection("User").add(u1);
+            // Obtenemos el ID del usuario guardado
+            // Puede ir a la consola de Firebase y revisar en Database que se haya creado una colección User.
+            // Ademas, dentro de User, debe existir un documento con el id que se imprima y los campos name, lastName y age.
+            
+            System.out.println("Usuario creado con ID: " + refU1.get().getId());
+            
+            User u2 = new User();
+            u2.setName("Test");
+            u2.setLastName("TestLastname");
+            u2.setAge(30);
+            
+            ApiFuture<DocumentReference> refU2 = db.collection("User").add(u2);
+            System.out.println("Usuario creado con ID: " + refU2.get().getId());
+            
+            User u3 = new User();
+            u3.setName("Pedro");
+            u3.setLastName("Perez");
+            u3.setAge(23);
+            
+            ApiFuture<DocumentReference> refU3 = db.collection("User").add(u3);
+            System.out.println("Usuario creado con ID: " + refU3.get().getId());
+            */
+            
+            
+            
+            
+            
+            /*
+            // EJEMPLO 2: RECUPERAR UN DATO
+
+            // Cambiar 6vY0HRo0pjAGJJ3ueDaT por el ID del objeto que se acaba de crear.
+            DocumentReference docRef = db.collection("User").document("8LgFRe8M9vkWnebTy4rK");
+            ApiFuture<DocumentSnapshot> future = docRef.get();
+            DocumentSnapshot document = future.get();
+            User user = null;
+            if (document.exists()) {
+              user = document.toObject(User.class);
+              System.out.println("Usuario recuperado de la base de datos: ");
+              System.out.println("ID: " + user.getId());
+              System.out.println("Nombre: " + user.getName());
+              System.out.println("Apellido: " + user.getLastName());
+              System.out.println("Edad: " + user.getAge());
+            } else {
+              System.out.println("No existe el document");
+            }
+            */
+            
+            
+            
+            
+            
+            /*
+            // EJEMPLO 3: CONSULTAR INFORMACIÓN
+            CollectionReference users = db.collection("User");
+            // Obtener usuarios cuya edad es menor a 29.
+            Query query = users.whereLessThan("age", 29);
+            ApiFuture<QuerySnapshot> querySnapshot = query.get();
+
+            // Tipo especial de for. Itera sobre cada documento recuperado.
+            System.out.println("Usuarios con edad menor a 29");
+            for (DocumentSnapshot document : querySnapshot.get().getDocuments()) {
+              User user = document.toObject(User.class);
+              System.out.println(user.getName() + " - " + user.getAge());
+            }
+            */
+            
+            
+            
+            db.close();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+}

@@ -1,0 +1,34 @@
+Instrucciones Firebase: 
+
+1. Crear un proyecto nuevo en https://console.firebase.google.com/ 
+
+2. Ingresar a Database en la parte izquierda y seleccionar Firestore. 
+
+3. Ir a Configuración y seleccionar "Configuración del proyecto" 
+
+4. Ir a "Cuentas de Servicio" y hacer click en "Generar nueva clave privada". 
+
+5. Esto va a descargar un archivo .json que vamos a utilizar más adelante. 
+
+6. En NetBeans, crear un nuevo proyecto pero no del tipo que siempre hacemos, sino nos vamos a Maven y escogemos Java Application. 
+
+7. Creamos el proyecto. 
+
+8. El proyecto va a descargar algunos archivos. El progreso se puede ver en la parte inferior de NetBeans. 
+
+9. Una vez que todo está listo, hacer click derecho en "Dependencies" y "Add Dependency..." 
+
+10. En el diálogo, en el campo Query, escribir: com.google.firebase y presionar Enter. 
+
+11. Expandir el que dice "firebase-admin" y escoger el jar con el número mayor. Debería ser 6.2.0 
+
+12. Click en "Add" 
+
+13. Crear una clase nueva con el nombre Sample y agregar el main. 
+
+14. Agregar un JSON file al package y dentro de este, copiar el contenido del archivo descargado en el paso 5. 
+
+15. Copiar los archivos de ejemplo en su proyecto. Del archivo "Sample", tomar el main y ejecutarlo descomentando cada uno de los ejemplos. Son 3 en total.
+
+
+Documentación oficial: https://firebase.google.com/docs/firestore/
