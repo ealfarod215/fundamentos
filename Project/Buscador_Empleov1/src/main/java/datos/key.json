@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "buscador-de-empleo-fundamentos",
+  "private_key_id": "634720ee38a48ff0a78dda213b3885e80cef10d1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDXAoiuW3H5mt6v\nHovt/1KLzndNXcHiq8Q2JA8OpqA8NyfoLkXQ37duUh1GQ9QOH5Fq+SXXWSRNUv0m\nHI7n3vpiyvrQzHlmtTv575mKh6NInzTBvBOqXiQF1eY6Yf7es6nWEb808JZjajPX\n/D1kaFdrsSUN9eAHWQbsS5esESUGsDf1o2VszXvR3zgcPqAHRlMmTlJ6FZgpMzlt\nSVvUD96cJjHgrVcRN4rRx4D9Dmn7N6miJTqBBJow8qxUW4CkvR3EMCqy+Kk3yddy\nc672l1goki/1HVdawUzcpQ9Y8QEht5DPF8WgXxcIRamQN1kTBB5bdAgcphJ6r5gO\nq3UVo7LLAgMBAAECggEAW1c6vKOhkFHwL0IRXRq+NSGRwj7F6udgtEVuViGIafxe\nij76LumTkhz1Tc/r6tITY3gT0OAQUX8jh0jTlwK9qTGlCwYKvwzYPW5B8r17qxLj\nhThCvHpA4G/F3mCaN37o9EXWzoU0xmgsPSHt7NV86gW4Aa3GLijujXzxosonyiZU\nSVGwir9oGpOGzxerylpUyP6JDm1YOIPgngoIooqrHaY9Mj2zvcONZBZUdPnQ0++w\nWw/im5D9xXBvszEN8YCB4Wl3K+wMIQaHtF9S4vbOjGFBI4+4URc9bJV1rErCdLOi\n26+vl3YDvbFkhOK9+C3Ite8BEW5eTscAsKo4Z4yYaQKBgQDurbowz8CFfhJAs4bJ\n/wmDciKp0DD9Lv2Vlnq8UZesUkrTfeSHooaDGLzC9Dg4skYHEApWLy0Ug8V5a74p\nVSk9y47OQD9F8++O5FzomyVHrHSwSMi2plwPBbZDtZcLC5x1BI/TocUGMLu/RZDe\nPGvO1tl3avORemDMmwvkBEty4wKBgQDmnRQ5pMeIaDBsmNgs9epjDcRyD15vwN+w\ne5xTSat3PiczVLZpU+6AVMT8GOqD24PgmhMnHdWnCnPPU541b7D5JvcBngaL3U9C\nR8jRaoFKge/6qnqmWiIWH7FzA+hiLWxfYnCPYeWKUrnsqUzfSL4oaiXmdKObII+I\nIlrdxOl8+QKBgQChGG0VSQP+lgsn1IRjjloTeFPhHf4SxUavUnPg64ld6+VJPi2j\nRpVXori1NTVFPz54weDYLttUf2QoAgrFxw8hAGWQ3FhYlL7aSVRUQ3M0HzhbS6T9\ncuer1AUjSkt6Twn5CW0yQHvFI9t0zDVtaoaxgt4g9fUT+e+f6f5qlmN+VQKBgGA3\nIywVqsYnqiR09KR1iXAAW3i3HtCDaRCJ0iQRtX9PqC1LZ7u0L+rM80622ole+buo\nrNsCIJTL0JusqHJlAjJBZob/Nn3+PMZLiuaMiBrc8ZHktL1ZF6WhXXi+JaNojjGR\nsaKw1oMKltW9oPv7rpLQDrYC7guX3yqOItkqAbyJAoGBALDnolRBdiqytHa8J2Yc\nCA0MDNAT4szjDGzfZ4a4KidhWjm7MvVvrLv3SjSBkcveGKM/cjp6qTduPSdaVAk1\nHVFLV3HXqIpNTlmXZTBSG3JwpaZcftxoa8YAsxu5Z6znsewh5pjwhtQ7nlviPSt5\niFyZj1ZKwzsd4UaPZvnbvW5x\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-28q02@buscador-de-empleo-fundamentos.iam.gserviceaccount.com",
+  "client_id": "111019289050842251236",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-28q02%40buscador-de-empleo-fundamentos.iam.gserviceaccount.com"
+}

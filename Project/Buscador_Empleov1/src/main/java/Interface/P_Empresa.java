@@ -47,6 +47,11 @@ public class P_Empresa extends javax.swing.JFrame {
         });
 
         btnConsultarFormularioUsuario.setText("Aceptar");
+        btnConsultarFormularioUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarFormularioUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -83,6 +88,12 @@ public class P_Empresa extends javax.swing.JFrame {
         Formulario_Empresa FE = new Formulario_Empresa();
         FE.setVisible(true);
     }//GEN-LAST:event_btnMostrarFormularioEmpresaActionPerformed
+
+    private void btnConsultarFormularioUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarFormularioUsuarioActionPerformed
+        // TODO add your handling code here:
+        Mostrar_Empresa e = new Mostrar_Empresa();
+        e.setVisible(true);
+    }//GEN-LAST:event_btnConsultarFormularioUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

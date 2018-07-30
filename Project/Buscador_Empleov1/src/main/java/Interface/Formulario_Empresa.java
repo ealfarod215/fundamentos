@@ -7,6 +7,7 @@ package Interface;
 
 import com.mycompany.buscador_empleov1.Empresa;
 import com.mycompany.buscador_empleov1.Formulario_Company;
+import datos.FirestoreData;
 import javax.swing.JOptionPane;
 
 /**
@@ -210,14 +211,20 @@ public class Formulario_Empresa extends javax.swing.JFrame {
 
     private void btnGetUserDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetUserDataActionPerformed
         // TODO add your handling code here:
-        Empresa E = new Empresa();
+        
         Formulario_Company Fc = new Formulario_Company();
         P_Empresa P = new P_Empresa();
+        
+        Empresa E = new Empresa();
         E.setID(txtEmpresaID.getText());
         E.setName(txtEmpresaName.getText());
         E.setAddress(txaEAddress.getText());
         E.setPhoneNumber(txtCompanyPhoneNumber.getText());
         E.setEmail(txtCompanyEmail.getText());
+        
+        FirestoreData fd = new FirestoreData();
+        fd.guardarEmpresa(E);
+        
         Fc.setCompanyDescription(txaCompannyDescription.getText());
         Fc.setHorarios(txaCompanyH.getText());
         Fc.setRequerimientos(txaCompanyR.getText());
