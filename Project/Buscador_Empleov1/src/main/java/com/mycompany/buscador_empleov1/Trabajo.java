@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buscador_empleo;
+package com.mycompany.buscador_empleov1;
 
 /**
  *
