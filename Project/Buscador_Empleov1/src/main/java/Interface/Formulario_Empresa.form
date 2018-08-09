@@ -26,10 +26,6 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtCompanyEmail" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtCompanyPhoneNumber" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtEmpresaName" alignment="0" max="32767" attributes="0"/>
-                  <Component id="txtEmpresaID" alignment="1" max="32767" attributes="0"/>
                   <Component id="lblTituloE" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblEname" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblIdEmpresa" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -37,6 +33,10 @@
                   <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
                   <Component id="lblCompanyNumber" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Component id="lblCEmanil" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEmpresaID" max="32767" attributes="0"/>
+                  <Component id="txtEmpresaName" max="32767" attributes="0"/>
+                  <Component id="txtCompanyEmail" max="32767" attributes="0"/>
+                  <Component id="txtCompanyPhoneNumber" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
@@ -74,15 +74,15 @@
                       <Component id="lblTituloE" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblIdEmpresa" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="txtEmpresaID" min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtEmpresaID" min="-2" pref="32" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="lblEname" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="txtEmpresaName" min="-2" pref="20" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtEmpresaName" min="-2" pref="32" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="lblCompanyNumber" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -90,16 +90,16 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="txtCompanyPhoneNumber" min="-2" pref="20" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="txtCompanyPhoneNumber" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="lblCEmanil" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="txtCompanyEmail" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="txtCompanyEmail" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane4" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>

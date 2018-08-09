@@ -16,7 +16,11 @@ public class Usuario {
     private String Address;
     private String PhoneNumber;
     private String Email;
-
+    private String LE;
+    private String LaboralEx;
+    private String Titulos;
+    private String Languages;
+    private String Extras;
     /**
      * @return the Name
      */
@@ -99,6 +103,81 @@ public class Usuario {
      */
     public void setEmail(String Email) {
         this.Email = Email;
+    }
+
+    /**
+     * @return the LE
+     */
+    public String getLE() {
+        return LE;
+    }
+
+    /**
+     * @param LE the LE to set
+     */
+    public void setLE(String LE) {
+        this.LE = LE;
+    }
+
+    /**
+     * @return the LaboralEx
+     */
+    public String getLaboralEx() {
+        return LaboralEx;
+    }
+
+    /**
+     * @param LaboralEx the LaboralEx to set
+     */
+    public void setLaboralEx(String LaboralEx) {
+        this.LaboralEx = LaboralEx;
+    }
+
+    /**
+     * @return the Titulos
+     */
+    public String getTitulos() {
+        return Titulos;
+    }
+
+    /**
+     * @param Titulos the Titulos to set
+     */
+    public void setTitulos(String Titulos) {
+        this.Titulos = Titulos;
+    }
+
+    /**
+     * @return the Languages
+     */
+    public String getLanguages() {
+        return Languages;
+    }
+
+    /**
+     * @param Languages the Languages to set
+     */
+    public void setLanguages(String Languages) {
+        this.Languages = Languages;
+    }
+
+    /**
+     * @return the Extras
+     */
+    public String getExtras() {
+        return Extras;
+    }
+
+    /**
+     * @param Extras the Extras to set
+     */
+    public void setExtras(String Extras) {
+        this.Extras = Extras;
+    }
+    
+    @Override
+    public String toString() {
+        return this.Name;
     }
     
 }

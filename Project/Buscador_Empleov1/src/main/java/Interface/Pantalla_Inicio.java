@@ -17,6 +17,7 @@ public class Pantalla_Inicio extends javax.swing.JFrame {
     public Pantalla_Inicio() {
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Pantalla Incicio");
     }
 
     /**
@@ -83,12 +84,14 @@ public class Pantalla_Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         P_Empresa e = new P_Empresa();
         e.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnMostrarEmpresaActionPerformed
 
     private void btnMostrarPersonaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarPersonaActionPerformed
         // TODO add your handling code here:
         P_Usuario e = new P_Usuario();
         e.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnMostrarPersonaActionPerformed
 
     /**

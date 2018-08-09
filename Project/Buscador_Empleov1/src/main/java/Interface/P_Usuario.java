@@ -44,6 +44,11 @@ public class P_Usuario extends javax.swing.JFrame {
         });
 
         btnConsultarFormularioEmpresa.setText("Aceptar");
+        btnConsultarFormularioEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnConsultarFormularioEmpresaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Consultar Ofertas por parte de Empresas");
 
@@ -54,26 +59,35 @@ public class P_Usuario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(104, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(100, 100, 100))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(173, 173, 173)
+                .addComponent(btnConsultarFormularioEmpresa)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(158, 158, 158)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(btnMostrarFormularioUsuario)
-                    .addComponent(btnConsultarFormularioEmpresa))
-                .addContainerGap(192, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(btnMostrarFormularioUsuario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(btnConsultarFormularioEmpresa)
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(btnMostrarFormularioUsuario)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addGap(57, 57, 57))
         );
 
         pack();
@@ -83,7 +97,16 @@ public class P_Usuario extends javax.swing.JFrame {
         // TODO add your handling code here:
         Formulario_Usuario e = new Formulario_Usuario();
         e.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnMostrarFormularioUsuarioActionPerformed
+
+    private void btnConsultarFormularioEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarFormularioEmpresaActionPerformed
+        // TODO add your handling code here:
+        Mostrar_Empresa me = new Mostrar_Empresa();
+        me.setVisible(true);
+        this.setVisible(false);
+        
+    }//GEN-LAST:event_btnConsultarFormularioEmpresaActionPerformed
 
     /**
      * @param args the command line arguments

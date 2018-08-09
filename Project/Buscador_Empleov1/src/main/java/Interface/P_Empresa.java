@@ -17,6 +17,7 @@ public class P_Empresa extends javax.swing.JFrame {
     public P_Empresa() {
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Pantalla Empresa");
     }
 
     /**
@@ -35,7 +36,7 @@ public class P_Empresa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Mostrar Solicitudes por parte de Personas");
+        jLabel1.setText("Mostrar Oferta por parte de Personas");
 
         jLabel2.setText("Ingresar Oferta de Empleo");
 
@@ -57,27 +58,34 @@ public class P_Empresa extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(124, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
                     .addComponent(jLabel2)
-                    .addComponent(btnMostrarFormularioEmpresa)
-                    .addComponent(btnConsultarFormularioUsuario))
-                .addContainerGap(203, Short.MAX_VALUE))
+                    .addComponent(jLabel1))
+                .addGap(116, 116, 116))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(172, 172, 172)
+                        .addComponent(btnConsultarFormularioUsuario))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(btnMostrarFormularioEmpresa)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(50, 50, 50)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addComponent(btnConsultarFormularioUsuario)
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(btnMostrarFormularioEmpresa)
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addGap(67, 67, 67))
         );
 
         pack();
@@ -87,12 +95,14 @@ public class P_Empresa extends javax.swing.JFrame {
         // TODO add your handling code here:
         Formulario_Empresa FE = new Formulario_Empresa();
         FE.setVisible(true);
+         this.setVisible(false);
     }//GEN-LAST:event_btnMostrarFormularioEmpresaActionPerformed
 
     private void btnConsultarFormularioUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarFormularioUsuarioActionPerformed
         // TODO add your handling code here:
-        Mostrar_Empresa e = new Mostrar_Empresa();
+        Mostrar_Personas e = new Mostrar_Personas();
         e.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnConsultarFormularioUsuarioActionPerformed
 
     /**

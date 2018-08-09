@@ -7,6 +7,12 @@ package Interface;
 
 import com.mycompany.buscador_empleov1.Empresa;
 import com.mycompany.buscador_empleov1.Formulario_Company;
+import com.mycompany.buscador_empleov1.Usuario;
+import datos.FirestoreData;
+import java.awt.Component;
+import java.util.List;
+import javax.swing.DefaultListModel;
+import javax.swing.ListModel;
 
 /**
  *
@@ -21,6 +27,8 @@ public class Mostrar_Empresa extends javax.swing.JFrame {
      */
     public Mostrar_Empresa() {
         initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Mostrar Empresas");
     }
 
     /**
@@ -32,58 +40,233 @@ public class Mostrar_Empresa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btn1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtA1 = new javax.swing.JTextArea();
+        jTextArea1 = new javax.swing.JTextArea();
+        btnMostrarE = new javax.swing.JButton();
+        txtMostrarNombre = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        listEmpresa = new javax.swing.JList<>();
+        btnBack = new javax.swing.JButton();
+        lblName = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        txtMostrarID = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        txaMostrarAddress = new javax.swing.JTextArea();
+        txtMostrarPhone = new javax.swing.JTextField();
+        txtMostrarEmail = new javax.swing.JTextField();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtMostrarDescription = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txtMostrarHorarios = new javax.swing.JTextArea();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        txtMostrarReq = new javax.swing.JTextArea();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        txtMostrarPuestos = new javax.swing.JTextArea();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btn1.setText("Mostrar");
-        btn1.addActionListener(new java.awt.event.ActionListener() {
+        btnMostrarE.setText("Mostrar Empresas");
+        btnMostrarE.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn1ActionPerformed(evt);
+                btnMostrarEActionPerformed(evt);
             }
         });
 
-        txtA1.setColumns(20);
-        txtA1.setRows(5);
-        jScrollPane2.setViewportView(txtA1);
+        listEmpresa.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                listEmpresaValueChanged(evt);
+            }
+        });
+        jScrollPane1.setViewportView(listEmpresa);
+
+        btnBack.setText("Regresar");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        lblName.setText("Name");
+
+        jLabel2.setText("Address");
+
+        jLabel1.setText("ID:");
+
+        jLabel3.setText("Telefono");
+
+        jLabel4.setText("Email");
+
+        jLabel5.setText("Descripcion");
+
+        jLabel6.setText("Horarios de Atencion");
+
+        jLabel7.setText("Requerimentos de la Empresa:");
+
+        jLabel8.setText("Puestos:");
+
+        txaMostrarAddress.setColumns(20);
+        txaMostrarAddress.setRows(5);
+        jScrollPane3.setViewportView(txaMostrarAddress);
+
+        txtMostrarDescription.setColumns(20);
+        txtMostrarDescription.setRows(5);
+        jScrollPane4.setViewportView(txtMostrarDescription);
+
+        txtMostrarHorarios.setColumns(20);
+        txtMostrarHorarios.setRows(5);
+        jScrollPane5.setViewportView(txtMostrarHorarios);
+
+        txtMostrarReq.setColumns(20);
+        txtMostrarReq.setRows(5);
+        jScrollPane6.setViewportView(txtMostrarReq);
+
+        txtMostrarPuestos.setColumns(20);
+        txtMostrarPuestos.setRows(5);
+        jScrollPane7.setViewportView(txtMostrarPuestos);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnMostrarE)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btn1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(125, 125, 125)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(114, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1)
+                                    .addComponent(lblName)
+                                    .addComponent(txtMostrarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtMostrarID, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(56, 56, 56)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel4)
+                                    .addComponent(txtMostrarPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtMostrarEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(btnBack))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel7))
+                                        .addGap(0, 0, Short.MAX_VALUE)))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 458, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(208, Short.MAX_VALUE))
+                .addComponent(btnMostrarE)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMostrarID)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblName)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtMostrarNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMostrarPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtMostrarEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 261, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel6)
+                                .addGap(3, 3, 3)
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnBack)))
+                .addGap(36, 36, 36))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-    String temp = "";
-    temp = temp + "Nombre: "+ empresa.getName()+"\n"+"Puesto: "+formulario.getPuesto()+"\n"+"Puestos: "+ formulario.getPuesto()+
-           "\n"+"Requisitos minimos: "+formulario.getRequerimientos()+"\n"+"Descripcion: "+formulario.getCompanyDescription()+"\n"+"Horario de atencion: "+formulario.getHorarios();
-    txtA1.setText(temp);
-            
-        
-    }//GEN-LAST:event_btn1ActionPerformed
+    private void btnMostrarEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarEActionPerformed
+        FirestoreData fd = new FirestoreData();
+        List<Empresa> empresas = fd.mostrarEmpresa();
+        DefaultListModel<Empresa> listModel = new DefaultListModel<Empresa>();
+        for (Empresa emp : empresas) {
+            listModel.addElement(emp);
+        }
+        listEmpresa.setModel(listModel);
+    }//GEN-LAST:event_btnMostrarEActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        Pantalla_Inicio p = new Pantalla_Inicio();
+        p.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void listEmpresaValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listEmpresaValueChanged
+        Empresa emp = listEmpresa.getSelectedValue();
+        txtMostrarNombre.setText(emp.getName());
+        txaMostrarAddress.setText(emp.getAddress());
+        txtMostrarID.setText(emp.getID());
+        txtMostrarPhone.setText(emp.getPhoneNumber());
+        txtMostrarEmail.setText(emp.getEmail());
+        txtMostrarDescription.setText(emp.getHorarios());
+        txtMostrarHorarios.setText(emp.getHorarios());
+        txtMostrarReq.setText(emp.getRequerimientos());
+        txtMostrarPuestos.setText(emp.getPuesto());
+    }//GEN-LAST:event_listEmpresaValueChanged
 
     /**
      * @param args the command line arguments
@@ -124,8 +307,34 @@ public class Mostrar_Empresa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn1;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnMostrarE;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea txtA1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JList<Empresa> listEmpresa;
+    private javax.swing.JTextArea txaMostrarAddress;
+    private javax.swing.JTextArea txtMostrarDescription;
+    private javax.swing.JTextField txtMostrarEmail;
+    private javax.swing.JTextArea txtMostrarHorarios;
+    private javax.swing.JTextField txtMostrarID;
+    private javax.swing.JTextField txtMostrarNombre;
+    private javax.swing.JTextField txtMostrarPhone;
+    private javax.swing.JTextArea txtMostrarPuestos;
+    private javax.swing.JTextArea txtMostrarReq;
     // End of variables declaration//GEN-END:variables
 }

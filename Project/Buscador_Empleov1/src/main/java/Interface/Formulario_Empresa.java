@@ -22,6 +22,7 @@ public class Formulario_Empresa extends javax.swing.JFrame {
     public Formulario_Empresa() {
         initComponents();
         setLocationRelativeTo(null);
+        setTitle("Formulario Empresa");
     }
 
     /**
@@ -119,17 +120,17 @@ public class Formulario_Empresa extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCompanyEmail)
-                    .addComponent(txtCompanyPhoneNumber)
-                    .addComponent(txtEmpresaName)
-                    .addComponent(txtEmpresaID, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblTituloE)
                     .addComponent(lblEname)
                     .addComponent(lblIdEmpresa)
                     .addComponent(lblEaddress)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblCompanyNumber)
-                    .addComponent(lblCEmanil))
+                    .addComponent(lblCEmanil)
+                    .addComponent(txtEmpresaID)
+                    .addComponent(txtEmpresaName)
+                    .addComponent(txtCompanyEmail)
+                    .addComponent(txtCompanyPhoneNumber))
                 .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -158,14 +159,14 @@ public class Formulario_Empresa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblTituloE)
                         .addGap(18, 18, 18)
-                        .addComponent(lblIdEmpresa)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtEmpresaID, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblIdEmpresa))
                     .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtEmpresaID, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblEname)
-                .addGap(18, 18, 18)
-                .addComponent(txtEmpresaName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtEmpresaName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(240, 240, 240)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCompanyNumber)
@@ -173,13 +174,13 @@ public class Formulario_Empresa extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtCompanyPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtCompanyPhoneNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(lblCEmanil)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCompanyEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtCompanyEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,25 +213,25 @@ public class Formulario_Empresa extends javax.swing.JFrame {
     private void btnGetUserDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGetUserDataActionPerformed
         // TODO add your handling code here:
         
-        Formulario_Company Fc = new Formulario_Company();
+        /*Formulario_Company Fc = new Formulario_Company();*/
         P_Empresa P = new P_Empresa();
+        FirestoreData fd = new FirestoreData();
         
         Empresa E = new Empresa();
         E.setID(txtEmpresaID.getText());
         E.setName(txtEmpresaName.getText());
         E.setAddress(txaEAddress.getText());
         E.setPhoneNumber(txtCompanyPhoneNumber.getText());
-        E.setEmail(txtCompanyEmail.getText());
+        E.setEmail(txtCompanyEmail.getText());       
+        E.setCompanyDescription(txaCompannyDescription.getText());
+        E.setHorarios(txaCompanyH.getText());
+        E.setRequerimientos(txaCompanyR.getText());
+        E.setPuesto(txaCompanyP.getText());
         
-        FirestoreData fd = new FirestoreData();
         fd.guardarEmpresa(E);
-        
-        Fc.setCompanyDescription(txaCompannyDescription.getText());
-        Fc.setHorarios(txaCompanyH.getText());
-        Fc.setRequerimientos(txaCompanyR.getText());
-        Fc.setPuesto(txaCompanyP.getText());
         JOptionPane.showMessageDialog(this, "Datos Guardados");
         P.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_btnGetUserDataActionPerformed
 
